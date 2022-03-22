@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${titulo}"></title>
+</head>
+<body>
+<h1 th:text="${titulo}"></h1>
+<table>
+	<thead>
+	<tr>
+		<th th:text="${idcuota}"></th>
+		<th th:text="${fecha}"></th>
+		<th th:text="${fechavencimiento}"></th>
+		<th th:text="${idinscripcion}"></th>
+		<th th:text="${monto}"></th>
+		<th th:text="${pagos}"></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr th:each="cuota: ${cuota}">
+		<td th:text="${cuota.idcuota}"></td>
+		<td th:text="${cuota.fecha}"></td>
+		<td th:text="${cuota.fechavencimiento}"></td>
+		<td th:text="${cuota.idinscripcion}"></td>
+		<td th:text="${cuota.monto}"></td>
+		<td th:text="${cuota.pagos}"></td>
+	</tr>
+	</tbody>
+</table>
+</body>
+</html>
