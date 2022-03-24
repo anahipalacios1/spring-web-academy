@@ -139,7 +139,7 @@ public class AlumnoManager {
         } catch (SQLException e) {
             System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
         }
-        return null; 
+        return null; //comentario
     }
     
 
